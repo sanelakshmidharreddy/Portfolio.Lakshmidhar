@@ -70,8 +70,7 @@ export function Hero() {
           </motion.p>
 
           <motion.p {...fadeUp(0.28)} className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground/80 md:text-base">
-            Exploring the future of Artificial Intelligence, Generative AI, AGI and intelligent
-            software systems.
+            {profile.explorationLine}
           </motion.p>
 
           <motion.div {...fadeUp(0.32)} className="mt-8 flex flex-wrap items-center gap-3">

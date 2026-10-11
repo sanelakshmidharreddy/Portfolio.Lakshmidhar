@@ -9,8 +9,16 @@ export const profile = {
   firstName: "SANE",
   lastName: "LAKSHMIDHAR REDDY",
   roles: ["AI ENGINEER", "FULL STACK DEVELOPER", "AI BUILDER"],
+  // Supporting identity — interests/interests-framed, not title claims
+  supportingIdentity: [
+    "AI Research Explorer",
+    "Generative AI Explorer",
+    "AGI Explorer",
+  ],
   tagline:
     "Building intelligent systems, AI-powered applications, full-stack products and immersive digital experiences.",
+  explorationLine:
+    "Exploring Artificial Intelligence, Generative AI, AGI and the future of Superintelligence.",
   mission:
     "I build, experiment and learn at the intersection of Artificial Intelligence, Software Development and interactive digital experiences.",
   location: "Chennai, Tamil Nadu, India",
