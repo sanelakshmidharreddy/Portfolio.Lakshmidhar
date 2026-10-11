@@ -78,8 +78,9 @@ export function Hero() {
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
-              href="mailto:sanelakshmidharreddy@gmail.com?subject=Resume%20Request"
-              title="Resume PDF coming soon — email me and I'll send it directly"
+              href="/resume.pdf"
+              download
+              title="Resume PDF coming soon — place your real file at /public/resume.pdf to activate this"
               className="inline-flex items-center gap-2 rounded-xl border border-border px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
             >
               Download Resume

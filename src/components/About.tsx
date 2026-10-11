@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Compass, GraduationCap, MapPin } from "lucide-react";
-import { approachSteps, currentlyExploring, profile } from "@/data/profile";
+import { approachSteps, currentlyExploring, exploringNote, profile } from "@/data/profile";
 import { SectionHeader, SectionReveal } from "./SectionReveal";
 
 export function About() {
@@ -92,6 +92,9 @@ export function About() {
             <span className="h-px w-10 bg-brand/40" aria-hidden />
             <span>Currently Exploring</span>
           </div>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            {exploringNote}
+          </p>
         </SectionReveal>
         <div className="mt-8 flex flex-wrap gap-2.5">
           {currentlyExploring.map((topic, i) => (

@@ -24,7 +24,7 @@ export const profile = {
     institution: "Dr. M.G.R. Educational and Research Institute, Chennai",
     years: "2024 – 2028",
     current: "3rd Year",
-    cgpa: "9.34 / 10",
+    cgpa: "9.45 / 10",
   },
 };
 
@@ -50,7 +50,15 @@ export const currentlyExploring = [
   "Full Stack Development",
   "Developer Tools",
   "Automation",
+  "AGI — Artificial General Intelligence",
+  "Artificial Superintelligence",
+  "AI Safety & Alignment",
+  "Intelligent Autonomous Systems",
 ];
+
+/** Framing note — AGI/ASI are research *interests*, never claimed achievements. */
+export const exploringNote =
+  "Exploring AGI, Artificial Superintelligence and the future of intelligent systems — researching emerging directions in autonomous AI.";
 
 /** LEARN → BUILD → EXPERIMENT → IMPROVE → SHARE */
 export const approachSteps = [
