@@ -1,36 +1,35 @@
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { PersonalDevelopment } from './components/PersonalDevelopment';
-import { Skills } from './components/Skills';
-import { Projects } from './components/Projects';
-import { Experience } from './components/Experience';
-import { Certifications } from './components/Certifications';
-import { Contact } from './components/Contact';
-import { Linkedin, Github } from 'lucide-react';
+import { lazy, Suspense } from "react";
+import { Navigation } from "./components/Navigation";
+import { Hero } from "./components/Hero";
+const About = lazy(() => import("./components/About").then((m) => ({ default: m.About })));
+const Projects = lazy(() => import("./components/Projects").then((m) => ({ default: m.Projects })));
+const Experience = lazy(() => import("./components/Experience").then((m) => ({ default: m.Experience })));
+const Skills = lazy(() => import("./components/Skills").then((m) => ({ default: m.Skills })));
+const Achievements = lazy(() => import("./components/Achievements").then((m) => ({ default: m.Achievements })));
+const Journey = lazy(() => import("./components/Journey").then((m) => ({ default: m.Journey })));
+const Contact = lazy(() => import("./components/Contact").then((m) => ({ default: m.Contact })));
+
+import { Footer } from "./components/Footer";
+import { Cursor } from "./components/Cursor";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground dark">
-      <Hero />
-      <About />
-      <PersonalDevelopment />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Certifications />
-      <Contact />
-      <footer className="py-10 text-center text-muted-foreground">
-        <div className="flex justify-center gap-4 mb-4">
-          <a href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <Linkedin size={24} className="hover:text-primary transition-colors" />
-          </a>
-          <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <Github size={24} className="hover:text-primary transition-colors" />
-          </a>
-        </div>
-        &copy; {new Date().getFullYear()} S. Lakshmidhar Reddy. All rights reserved.
-      </footer>
+    <div className="noise relative min-h-screen bg-background text-foreground dark">
+      <Cursor />
+      <Navigation />
+      <main>
+        <Hero />
+        <Suspense fallback={<div className="py-24" />}>
+          <About />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Achievements />
+          <Journey />
+          <Contact />
+        </Suspense>
+      </main>
+      <Footer />
     </div>
   );
 }
-
