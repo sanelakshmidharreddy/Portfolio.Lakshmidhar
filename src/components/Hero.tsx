@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, ArrowUpRight, Download, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 import { profile } from "@/data/profile";
 import { AIOrb } from "./three/AIOrb";
 
@@ -69,6 +69,11 @@ export function Hero() {
             {profile.tagline}
           </motion.p>
 
+          <motion.p {...fadeUp(0.28)} className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground/80 md:text-base">
+            Exploring the future of Artificial Intelligence, Generative AI, AGI and intelligent
+            software systems.
+          </motion.p>
+
           <motion.div {...fadeUp(0.32)} className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="#projects"
@@ -78,17 +83,8 @@ export function Hero() {
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
-              href="/resume.pdf"
-              download
-              title="Resume PDF coming soon — place your real file at /public/resume.pdf to activate this"
-              className="inline-flex items-center gap-2 rounded-xl border border-border px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
-            >
-              Download Resume
-              <Download size={16} />
-            </a>
-            <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-1.5 px-2 py-3 text-sm font-medium text-muted-foreground transition-colors hover:text-brand"
+              className="inline-flex items-center gap-1.5 rounded-xl border border-border px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
             >
               Let's Connect <ArrowUpRight size={16} />
             </a>

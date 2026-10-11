@@ -42,18 +42,16 @@ export const navLinks = [
 export const currentlyExploring = [
   "Artificial Intelligence",
   "Generative AI",
-  "Machine Learning",
   "AI Agents",
+  "AGI — Artificial General Intelligence",
+  "Superintelligence",
+  "Machine Learning",
   "Voice AI",
   "AI Application Development",
   "3D Web Experiences",
   "Full Stack Development",
-  "Developer Tools",
   "Automation",
-  "AGI — Artificial General Intelligence",
-  "Artificial Superintelligence",
-  "AI Safety & Alignment",
-  "Intelligent Autonomous Systems",
+  "AI Research",
 ];
 
 /** Framing note — AGI/ASI are research *interests*, never claimed achievements. */
